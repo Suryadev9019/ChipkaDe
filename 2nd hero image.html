@@ -1,0 +1,68 @@
+<style>
+  /* Container for the scroll section */
+  .ck-animated-scroll {
+    background-color: #d0ff00; /* Neon Accent */
+    padding: 180px 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 -20px; /* Bleeds to edge */
+    position: relative;
+    /* Subtle grid pattern to match your image */
+    background-image: 
+      linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .ck-scroll-row {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.5rem, 9vw, 6.5rem);
+    font-weight: 900;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: #000;
+    margin: 0;
+    white-space: nowrap;
+    will-change: transform, opacity;
+    transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  }
+</style>
+
+<div class="ck-animated-scroll" id="ck-trigger">
+  <h2 class="ck-scroll-row" id="ck-top">HELPING YOU</h2>
+  <h2 class="ck-scroll-row" id="ck-mid">RISE ABOVE</h2>
+  <h2 class="ck-scroll-row" id="ck-bot">THE CURRENT</h2>
+</div>
+
+<script>
+  document.addEventListener('scroll', function() {
+    const trigger = document.getElementById('ck-trigger');
+    const topRow = document.getElementById('ck-top');
+    const midRow = document.getElementById('ck-mid');
+    const botRow = document.getElementById('ck-bot');
+
+    if (!trigger) return;
+
+    const rect = trigger.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Only animate when the section is on screen
+    if (rect.top < windowHeight && rect.bottom > 0) {
+      // Calculate scroll progress (0 when section enters, 1 when it leaves)
+      const distance = windowHeight - rect.top;
+      const progress = Math.min(Math.max(distance / (windowHeight + rect.height), 0), 1);
+      
+      const moveValue = progress * 300; // Adjust for more/less slide
+      const fadeValue = 1 - (progress * 2); // Fades out faster
+
+      // Apply Transformations
+      topRow.style.transform = `translateX(-${moveValue}px)`;
+      midRow.style.opacity = fadeValue;
+      botRow.style.transform = `translateX(${moveValue}px)`;
+    }
+  });
+</script>

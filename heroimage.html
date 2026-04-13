@@ -1,0 +1,175 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&family=Syne:wght@800&display=swap');
+
+  /* Root Variables */
+  .ck-wrapper {
+    --ck-bg: #0a0a0b;
+    --ck-accent: #d0ff00;
+    --ck-text-main: #ffffff;
+    --ck-text-dim: #a1a1aa;
+    
+    background-color: var(--ck-bg);
+    color: var(--ck-text-main);
+    font-family: 'Inter', sans-serif;
+    margin: 0 -20px;
+  }
+
+  /* --- HERO SECTION --- */
+  .ck-hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #1a1a1d 0%, #0a0a0b 100%);
+    padding: 0 10%;
+  }
+
+  .ck-hero .ck-overline {
+    color: var(--ck-text-dim);
+    letter-spacing: 0.3em;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .ck-hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3rem, 10vw, 7.5rem);
+    line-height: 0.85;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-weight: 800;
+    color: #ffffff; /* FORCES WHITE COLOR FOR 'JUST' AND 'IT' */
+  }
+
+  .ck-hero p.ck-description {
+    color: var(--ck-text-dim);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 40px;
+  }
+
+  .ck-btn {
+    background: var(--ck-accent);
+    color: black;
+    padding: 18px 45px;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 0 20px rgba(208, 255, 0, 0.2);
+    display: inline-block;
+  }
+
+  .ck-btn:hover {
+    box-shadow: 0 0 40px rgba(208, 255, 0, 0.5);
+    transform: scale(1.05);
+  }
+
+  /* --- MARQUEE --- */
+  .ck-marquee {
+    background: var(--ck-accent);
+    color: black;
+    padding: 15px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .ck-marquee-content {
+    display: inline-block;
+    animation: ck-scroll 25s linear infinite;
+  }
+
+  @keyframes ck-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+</style>
+
+<div class="ck-wrapper">
+  <section class="ck-hero">
+    <p class="ck-overline">Aesthetic Accessories</p>
+    <h1>JUST<br><span style="color: var(--ck-accent);">STICK</span> IT.</h1>
+    <p class="ck-description">Premium vinyl stickers, handcrafted keychains, and lofi posters for your creative space.</p>
+    <a href="/collections/all" class="ck-btn">Shop Collection</a>
+  </section>
+
+  <div class="ck-marquee">
+    <div class="ck-marquee-content">
+      FREE SHIPPING OVER RS. 499 • NEW ANIME DROP FRIDAY • WATERPROOF VINYL • PREMIUM TEXTURE • FREE SHIPPING OVER RS. 499 • NEW ANIME DROP FRIDAY • WATERPROOF VINYL • PREMIUM TEXTURE •
+    </div>
+  </div>
+</div>
+<style>
+  /* Container for the scroll section */
+  .ck-animated-scroll {
+    background-color: #d0ff00; /* Neon Accent */
+    padding: 180px 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 -20px; /* Bleeds to edge */
+    position: relative;
+    /* Subtle grid pattern to match your image */
+    background-image: 
+      linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .ck-scroll-row {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.5rem, 9vw, 6.5rem);
+    font-weight: 900;
+    line-height: 0.9;
+    text-transform: uppercase;
+    color: #000;
+    margin: 0;
+    white-space: nowrap;
+    will-change: transform, opacity;
+    transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  }
+</style>
+
+<div class="ck-animated-scroll" id="ck-trigger">
+  <h2 class="ck-scroll-row" id="ck-top">HELPING YOU</h2>
+  <h2 class="ck-scroll-row" id="ck-mid">RISE ABOVE</h2>
+  <h2 class="ck-scroll-row" id="ck-bot">THE CURRENT</h2>
+</div>
+
+<script>
+  document.addEventListener('scroll', function() {
+    const trigger = document.getElementById('ck-trigger');
+    const topRow = document.getElementById('ck-top');
+    const midRow = document.getElementById('ck-mid');
+    const botRow = document.getElementById('ck-bot');
+
+    if (!trigger) return;
+
+    const rect = trigger.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    // Only animate when the section is on screen
+    if (rect.top < windowHeight && rect.bottom > 0) {
+      // Calculate scroll progress (0 when section enters, 1 when it leaves)
+      const distance = windowHeight - rect.top;
+      const progress = Math.min(Math.max(distance / (windowHeight + rect.height), 0), 1);
+      
+      const moveValue = progress * 300; // Adjust for more/less slide
+      const fadeValue = 1 - (progress * 2); // Fades out faster
+
+      // Apply Transformations
+      topRow.style.transform = `translateX(-${moveValue}px)`;
+      midRow.style.opacity = fadeValue;
+      botRow.style.transform = `translateX(${moveValue}px)`;
+    }
+  });
+</script>
