@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIPKADE | Aesthetic Accessories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root { --lime: #ccff00; }
+        body { background-color: #000; color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+        .bungee { font-family: 'Space Grotesk', sans-serif; font-weight: 900; }
+        
+        /* The FOMO Grain Effect */
+        .grain::after {
+            content: ""; position: fixed; top: -100%; left: -100%; width: 300%; height: 300%;
+            background: url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.06; pointer-events: none; z-index: 999;
+        }
+
+        /* Marquee Animation */
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .marquee { display: flex; animation: scroll 30s linear infinite; white-space: nowrap; }
+
+        .btn-chipka {
+            background-color: var(--lime); color: #000;
+            padding: 1rem 2rem; font-weight: 800; text-transform: uppercase;
+            box-shadow: 6px 6px 0px #fff; transition: 0.2s;
+        }
+        .btn-chipka:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0px #fff; }
+
+        /* Grid background for the 'Rise Above' section */
+        .bg-grid {
+            background-image: linear-gradient(var(--lime) 1px, transparent 1px), linear-gradient(90deg, var(--lime) 1px, transparent 1px);
+            background-size: 40px 40px; background-color: #b8e600;
+        }
+    </style>
+</head>
+<body class="grain">
+
+    <nav class="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10 px-6 py-4 flex justify-between items-center">
+        <div class="bungee text-2xl italic tracking-tighter">CHIPKADE.</div>
+        <div class="hidden md:flex gap-10 text-[10px] uppercase font-black tracking-widest">
+            <a href="#" class="hover:text-lime">Catalog</a>
+            <a href="#" class="hover:text-lime">Skins</a>
+            <a href="#" class="hover:text-lime">Custom</a>
+        </div>
+        <div class="flex gap-4 items-center">
+            <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[10px]">0</div>
+        </div>
+    </nav>
+
+    <header class="h-[80vh] flex flex-col justify-center items-center text-center px-6 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-0"></div>
+        <div class="z-10">
+            <span class="text-[10px] tracking-[0.5em] text-gray-400 uppercase mb-4 block">Aesthetic Accessories</span>
+            <h1 class="text-7xl md:text-[10rem] bungee leading-none tracking-tighter mb-8">
+                JUST <br> <span class="text-lime">STICK IT.</span>
+            </h1>
+            <p class="text-gray-400 max-w-lg mx-auto mb-10 text-sm font-medium">
+                Premium vinyl stickers, handcrafted keychains, and lofi posters for your creative space. 100% Residue-free.
+            </p>
+            <button class="btn-chipka">Shop Collection</button>
+        </div>
+    </header>
+
+    <div class="bg-lime text-black border-y-2 border-black overflow-hidden py-3">
+        <div class="marquee">
+            <span class="text-sm font-black uppercase mx-4">• NEW ANIME DROP FRIDAY • WATERPROOF VINYL • PREMIUM TEXTURE • FREE SHIPPING OVER RS. 499 • NEW ANIME DROP FRIDAY • WATERPROOF VINYL • PREMIUM TEXTURE • FREE SHIPPING OVER RS. 499 </span>
+            <span class="text-sm font-black uppercase mx-4">• NEW ANIME DROP FRIDAY • WATERPROOF VINYL • PREMIUM TEXTURE • FREE SHIPPING OVER RS. 499 • NEW ANIME DROP FRIDAY • WATERPROOF VINYL • PREMIUM TEXTURE • FREE SHIPPING OVER RS. 499 </span>
+        </div>
+    </div>
+
+    <section class="py-24 px-6">
+        <div class="flex justify-between items-end mb-12">
+            <h2 class="bungee text-4xl uppercase">Featured<br>Drops</h2>
+            <a href="#" class="text-xs font-bold border-b-2 border-lime pb-1">VIEW ALL</a>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="group cursor-pointer">
+                <div class="aspect-square bg-[#111] overflow-hidden rounded-2xl mb-4 border border-white/5 relative">
+                    <div class="absolute top-2 left-2 bg-lime text-black text-[8px] font-black px-2 py-1 rounded">NEW</div>
+                    <img src="https://images.unsplash.com/photo-1598331668826-20cecc596b86?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <h3 class="text-xs font-bold mb-1">Retro Gaming Skin</h3>
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">RS. 399.00</p>
+            </div>
+            <div class="hidden md:block group cursor-pointer">
+                <div class="aspect-square bg-[#111] overflow-hidden rounded-2xl mb-4 border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1589987607627-616cab5c235a?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </div>
+                <h3 class="text-xs font-bold mb-1">Anime Pack 01</h3>
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">RS. 199.00</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-grid py-40 px-6 text-center text-black">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="bungee text-5xl md:text-8xl leading-[0.9] tracking-tighter">
+                HELPING YOU <br>
+                <span class="opacity-30">RISE ABOVE</span> <br>
+                THE CURRENT
+            </h2>
+        </div>
+    </section>
+
+    <section class="bg-white text-black py-32 px-6 flex flex-col items-center">
+        <h2 class="bungee text-6xl md:text-[10rem] text-center leading-[0.8] mb-12">
+            FINALLY <br> NO BORING <br> STICKERS
+        </h2>
+        <div class="w-40 h-1 bg-black"></div>
+    </section>
+
+    <footer class="p-10 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div>
+            <div class="bungee text-4xl italic mb-6">CHIPKADE.</div>
+            <p class="text-xs text-gray-500 max-w-xs leading-loose">
+                Premium vinyl studio based in India. High-tack, zero-residue, all vibes.
+            </p>
+        </div>
+        <div class="flex flex-col md:items-end gap-4">
+            <p class="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400">Join the Lab</p>
+            <div class="flex gap-2">
+                <input type="text" placeholder="Email" class="bg-[#111] border border-white/10 p-3 text-xs w-60 outline-none focus:border-lime">
+                <button class="bg-white text-black px-6 text-xs font-black uppercase tracking-widest">OK</button>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
