@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELITE ACCENTS | The 2026 Collection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0a0a0a; color: #ffffff; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        /* Scrolling Ticker Animation */
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .ticker-wrap { overflow: hidden; white-space: nowrap; border-top: 1px solid #333; border-bottom: 1px solid #333; }
+        .ticker { display: inline-block; animation: scroll 20s linear infinite; font-weight: 800; font-size: 1.5rem; text-transform: uppercase; padding: 1rem 0; }
+
+        .hover-lift { transition: all 0.5s ease; }
+        .hover-lift:hover { transform: translateY(-10px); border-color: rgba(255,255,255,0.4); }
+    </style>
+</head>
+<body class="pt-24">
+
+    <nav class="fixed top-0 w-full z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto glass rounded-2xl px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-widest uppercase italic">ELITE<span class="text-gray-500">ACCENTS</span></div>
+            <div class="hidden md:flex gap-10 text-xs font-medium tracking-widest uppercase">
+                <a href="#shop" class="hover:text-gray-400 transition">Shop</a>
+                <a href="#quality" class="hover:text-gray-400 transition">Quality</a>
+                <a href="#bundles" class="hover:text-gray-400 transition">Bundles</a>
+            </div>
+            <div class="w-10 h-10 bg-white text-black rounded-full flex items-center justify-center font-bold text-xs">0</div>
+        </div>
+    </nav>
+
+    <div class="ticker-wrap mb-20">
+        <div class="ticker">
+            NEW DROP LIVE NOW • LIMITED EDITION POSTERS • SHIP WORLDWIDE • 3M VINYL TECH • PREMIUM FINISH •&nbsp;
+            NEW DROP LIVE NOW • LIMITED EDITION POSTERS • SHIP WORLDWIDE • 3M VINYL TECH • PREMIUM FINISH •&nbsp;
+        </div>
+    </div>
+
+    <section id="shop" class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 mb-32">
+        <div class="md:col-span-2 relative h-[600px] group overflow-hidden rounded-[2rem]">
+            <img src="https://images.unsplash.com/photo-1621439654810-093845607640?q=80&w=2000" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent p-12 flex flex-col justify-end">
+                <h2 class="text-5xl font-black italic uppercase leading-none">The Artist<br>Posters</h2>
+                <button class="mt-6 w-fit border border-white px-8 py-3 rounded-full text-xs font-bold uppercase hover:bg-white hover:text-black transition">View Series</button>
+            </div>
+        </div>
+        <div class="bg-[#111] rounded-[2rem] p-10 flex flex-col justify-between border border-white/5 hover-lift">
+            <h3 class="text-3xl font-bold">Keychain <br>Vault</h3>
+            <p class="text-gray-500 text-sm">Industrial grade acrylic with scratch-resistant coating.</p>
+            <div class="aspect-square bg-[#1a1a1a] rounded-2xl flex items-center justify-center text-5xl">🔑</div>
+        </div>
+    </section>
+
+    <section id="bundles" class="bg-white text-black py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <h2 class="text-6xl font-black uppercase leading-none tracking-tighter">Save by <br><span class="text-gray-400">Stacking.</span></h2>
+                <p class="text-gray-500 max-w-xs font-medium">Build your own identity. The more you stick, the less you pay.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="border-2 border-black p-8 rounded-3xl flex flex-col items-center text-center">
+                    <span class="bg-black text-white px-4 py-1 rounded-full text-[10px] font-bold mb-6 tracking-widest uppercase">Starter Kit</span>
+                    <h4 class="text-2xl font-bold mb-4 italic">5 Sticker Pack</h4>
+                    <p class="text-gray-600 mb-8 text-sm">Curated selection for your phone or journal.</p>
+                    <div class="text-3xl font-black mb-6">$14.99</div>
+                    <button class="w-full bg-black text-white py-4 rounded-xl font-bold hover:scale-105 transition">ADD TO BAG</button>
+                </div>
+                <div class="border-[6px] border-blue-600 p-8 rounded-3xl flex flex-col items-center text-center relative">
+                    <div class="absolute -top-4 bg-blue-600 text-white px-6 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Most Popular</div>
+                    <span class="text-gray-400 px-4 py-1 text-[10px] font-bold mb-6 tracking-widest uppercase italic">Full Coverage</span>
+                    <h4 class="text-2xl font-bold mb-4">The Skin + Sticker Set</h4>
+                    <p class="text-gray-600 mb-8 text-sm">Laptop Skin + 10 Matching Stickers.</p>
+                    <div class="text-3xl font-black mb-6">$39.99</div>
+                    <button class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:scale-105 transition">ADD TO BAG</button>
+                </div>
+                <div class="border-2 border-black p-8 rounded-3xl flex flex-col items-center text-center">
+                    <span class="bg-black text-white px-4 py-1 rounded-full text-[10px] font-bold mb-6 tracking-widest uppercase">The Collector</span>
+                    <h4 class="text-2xl font-bold mb-4 italic">The Wall Set</h4>
+                    <p class="text-gray-600 mb-8 text-sm">3 A3 Posters + Keychain of choice.</p>
+                    <div class="text-3xl font-black mb-6">$55.00</div>
+                    <button class="w-full bg-black text-white py-4 rounded-xl font-bold hover:scale-105 transition">ADD TO BAG</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quality" class="py-32 max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-5xl font-extrabold mb-8 italic">Engineered <br>to Last.</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="text-blue-500 font-black text-2xl">01</div>
+                        <div>
+                            <h5 class="font-bold text-lg">3M Bubble-Free Tech</h5>
+                            <p class="text-gray-500 text-sm">Our skins use air-release channels for a perfect, easy install every time.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="text-blue-500 font-black text-2xl">02</div>
+                        <div>
+                            <h5 class="font-bold text-lg">UV-Shield Lamination</h5>
+                            <p class="text-gray-500 text-sm">Sunlight won't fade your designs. Guaranteed colors for 5+ years.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="text-blue-500 font-black text-2xl">03</div>
+                        <div>
+                            <h5 class="font-bold text-lg">Zero-Residue Removal</h5>
+                            <p class="text-gray-500 text-sm">Change your style without the sticky mess. Peels off clean from any surface.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-[3rem] overflow-hidden border border-white/10 h-[500px]">
+                <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?q=80&w=1200" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 bg-[#050505] text-center border-t border-white/5">
+        <div class="mb-10 opacity-20 text-6xl font-black tracking-tighter">ELITE ACCENTS STUDIO</div>
+        <div class="flex justify-center gap-12 text-xs text-gray-500 tracking-[0.3em] uppercase">
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">Shipping</a>
+        </div>
+    </footer>
+
+</body>
+</html>

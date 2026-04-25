@@ -1,0 +1,107 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&family=Syne:wght@800&display=swap');
+
+  /* Root Variables */
+  .ck-wrapper {
+    --ck-bg: #0a0a0b;
+    --ck-accent: #090C9B;
+    --ck-text-main: #ffffff;
+    --ck-text-dim: #a1a1aa;
+    
+    background-color: var(--ck-bg);
+    color: var(--ck-text-main);
+    font-family: 'Inter', sans-serif;
+    margin: 0 -20px;
+  }
+
+  /* --- HERO SECTION --- */
+  .ck-hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #023E8A 0%, #023E8A 100%);
+    padding: 0 10%;
+  }
+
+  .ck-hero .ck-overline {
+    color: var(--ck-text-dim);
+    letter-spacing: 0.3em;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .ck-hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(3rem, 10vw, 7.5rem);
+    line-height: 0.85;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-weight: 800;
+    color: #ffffff; /* FORCES WHITE COLOR FOR 'JUST' AND 'IT' */
+  }
+
+  .ck-hero p.ck-description {
+    color: var(--ck-text-dim);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-bottom: 40px;
+  }
+
+  .ck-btn {
+    background: var(--ck-accent);
+    color: black;
+    padding: 18px 45px;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 0 20px rgba(208, 255, 0, 0.2);
+    display: inline-block;
+  }
+
+  .ck-btn:hover {
+    box-shadow: 0 0 40px rgba(208, 255, 0, 0.5);
+    transform: scale(1.05);
+  }
+
+  /* --- MARQUEE --- */
+  .ck-marquee {
+    background: var(--ck-accent);
+    color: black;
+    padding: 12px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .ck-marquee-content {
+    display: inline-block;
+    animation: ck-scroll 25s linear infinite;
+  }
+
+  @keyframes ck-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+</style>
+
+<div class="ck-wrapper">
+  <section class="ck-hero">
+    <p class="ck-overline">Aesthetic Accessories</p>
+    <h1>JUST<br><span style="color: var(--ck-accent);">STICK</span> IT.</h1>
+    <p class="ck-description">Premium vinyl stickers, handcrafted keychains, and lofi posters for your creative space.</p>
+    <a href="/collections/all" class="ck-btn">Shop Collection</a>
+  </section>
+
+  <div class="ck-marquee">
+    <div class="ck-marquee-content">
+      FREE SHIPPING OVER RS. 499 • NEW ANIME DROP FRIDAY • WATERPROOF VINYL • PREMIUM TEXTURE • FREE SHIPPING OVER RS. 499 • NEW ANIME DROP FRIDAY • WATERPROOF VINYL • PREMIUM TEXTURE •
+    </div>
+  </div>
+</div>
