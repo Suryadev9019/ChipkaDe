@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CHIPKADE®</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{
+      --bg:#050505;
+      --card:#0f0f0f;
+      --soft:#171717;
+      --text:#f5f5f5;
+      --muted:#9b9b9b;
+      --accent:#ec1302;
+      --line:#232323;
+    }
+
+    body{
+      background:
+      radial-gradient(circle at top right, rgba(236,19,2,.12), transparent 35%),
+      radial-gradient(circle at left center, rgba(236,19,2,.06), transparent 30%),
+      linear-gradient(180deg,#050505,#090909);
+      color:var(--text);
+      font-family:Inter,sans-serif;
+    }
+
+    .brand{
+      font-weight:900;
+      letter-spacing:-.04em;
+    }
+
+    .glass{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(20px);
+      border-radius:28px;
+      transition:.35s;
+    }
+
+    .glass:hover{
+      transform:translateY(-8px);
+      border-color:rgba(236,19,2,.35);
+      box-shadow:0 20px 60px rgba(0,0,0,.45);
+    }
+
+    .btn{
+      background:linear-gradient(135deg,#ec1302,#ff4b3d);
+      color:white;
+      padding:14px 30px;
+      border-radius:999px;
+      font-weight:800;
+      text-transform:uppercase;
+      box-shadow:0 12px 40px rgba(236,19,2,.35);
+      transition:.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .outline-btn{
+      border:1px solid rgba(255,255,255,.15);
+      padding:14px 30px;
+      border-radius:999px;
+      font-weight:800;
+      text-transform:uppercase;
+    }
+
+    .hero-text{
+      line-height:.9;
+      letter-spacing:-.05em;
+    }
+  </style>
+</head>
+
+<body class="px-6 md:px-14">
+
+  <!-- NAV -->
+  <nav class="py-8 flex justify-between items-center border-b border-white/10">
+    <div class="brand text-3xl">CHIPKADE.</div>
+
+    <div class="hidden md:flex gap-10 uppercase text-xs font-bold tracking-[.25em] text-zinc-300">
+      <a href="#">Shop</a>
+      <a href="#">Drops</a>
+      <a href="#">Custom Lab</a>
+      <a href="#">Archive</a>
+    </div>
+
+    <div class="font-bold uppercase text-sm">Bag (0)</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="grid md:grid-cols-2 gap-10 items-center py-24">
+
+    <div>
+      <p class="uppercase text-xs tracking-[.35em] font-black text-[#ec1302] mb-5">
+        Limited Drop / Studio Series
+      </p>
+
+      <h1 class="hero-text text-[14vw] md:text-[8vw] font-black mb-8">
+        BUILT<br>
+        TO <span class="text-[#ec1302] italic">STAND OUT.</span>
+      </h1>
+
+      <p class="text-zinc-400 text-lg max-w-xl mb-10">
+        Premium stickers, anime metal keychains, laptop skins and custom drops —
+        designed for collectors who want personality in everything they own.
+      </p>
+
+      <div class="flex gap-4 flex-wrap">
+        <button class="btn">Shop Drop</button>
+        <button class="outline-btn">Explore</button>
+      </div>
+    </div>
+
+    <div class="glass h-[600px] p-10 flex flex-col justify-between">
+      <span class="text-8xl font-black opacity-10">01</span>
+      <div>
+        <p class="text-sm uppercase font-bold text-zinc-500">Featured Drop</p>
+        <h3 class="text-4xl font-black mt-2">SIGNATURE PACK</h3>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FEATURED -->
+  <section class="mb-28">
+    <div class="flex justify-between items-end mb-10">
+      <div>
+        <p class="text-[#ec1302] uppercase text-xs tracking-[.35em] font-black mb-3">
+          Featured Products
+        </p>
+        <h2 class="text-5xl font-black">BEST PICKS.</h2>
+      </div>
+
+      <a class="uppercase text-sm font-bold text-zinc-400">View All →</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="glass p-6">
+        <div class="h-72 rounded-3xl bg-[#151515] mb-5 flex items-center justify-center text-zinc-600 font-bold">
+          PRODUCT
+        </div>
+        <h3 class="text-2xl font-black">Anime Keychain</h3>
+        <p class="text-zinc-400 mt-2">Premium metal • Gloss finish</p>
+        <div class="mt-5 flex justify-between">
+          <span class="text-xl font-black">₹149</span>
+          <button class="btn !px-5 !py-3">Add</button>
+        </div>
+      </div>
+
+      <div class="rounded-[28px] p-6 bg-[#ec1302] text-white scale-[1.02] shadow-2xl shadow-red-700/20">
+        <div class="h-72 rounded-3xl border border-white/20 mb-5 flex items-center justify-center font-bold">
+          FEATURED DROP
+        </div>
+        <h3 class="text-2xl font-black">Sticker Collection</h3>
+        <p class="mt-2 opacity-90">Best seller • Waterproof vinyl</p>
+        <div class="mt-5 flex justify-between">
+          <span class="text-xl font-black">₹129</span>
+          <button class="bg-white text-[#ec1302] px-5 py-3 rounded-full font-black uppercase">
+            Add
+          </button>
+        </div>
+      </div>
+
+      <div class="glass p-6">
+        <div class="h-72 rounded-3xl bg-[#151515] mb-5 flex items-center justify-center text-zinc-600 font-bold">
+          PRODUCT
+        </div>
+        <h3 class="text-2xl font-black">Laptop Skin</h3>
+        <p class="text-zinc-400 mt-2">Matte finish • Precision cut</p>
+        <div class="mt-5 flex justify-between">
+          <span class="text-xl font-black">₹299</span>
+          <button class="btn !px-5 !py-3">Add</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CATEGORY -->
+  <section class="mb-28">
+    <p class="text-[#ec1302] uppercase text-xs tracking-[.35em] font-black mb-6">
+      Shop By Category
+    </p>
+
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="glass p-8 min-h-[220px] flex flex-col justify-between">
+        <h3 class="text-3xl font-black">Stickers</h3>
+        <span class="text-zinc-500">Collection →</span>
+      </div>
+
+      <div class="glass p-8 min-h-[220px] flex flex-col justify-between">
+        <h3 class="text-3xl font-black">Keychains</h3>
+        <span class="text-zinc-500">Collection →</span>
+      </div>
+
+      <div class="glass p-8 min-h-[220px] flex flex-col justify-between">
+        <h3 class="text-3xl font-black">Skins</h3>
+        <span class="text-zinc-500">Collection →</span>
+      </div>
+
+      <div class="glass p-8 min-h-[220px] flex flex-col justify-between border border-[#ec1302]/30">
+        <h3 class="text-3xl font-black text-[#ec1302]">Custom Lab</h3>
+        <span class="text-zinc-400">Build →</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 py-10 flex flex-col md:flex-row justify-between gap-6 text-xs uppercase tracking-[.25em] font-bold text-zinc-500">
+    <span>© 2026 CHIPKADE</span>
+    <span>Designed In India</span>
+    <span>Built To Stand Out</span>
+  </footer>
+
+</body>
+</html>

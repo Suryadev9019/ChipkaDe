@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHIPKADE® | Studio Theme</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+:root{--bg:#fbf7ee;--text:#0b0d0f;--accent:#f57c00;--gold:#ffb347;--card:rgba(255,255,255,.72);--muted:#6d737a;}
+body{background:linear-gradient(180deg,#fffdf8 0%,#fbf7ee 100%);color:var(--text);font-family:Inter,sans-serif;}
+.brand{font-family:Unbounded,sans-serif;font-weight:900;letter-spacing:-.04em;}
+.border-theme{border:1px solid rgba(255,255,255,.5);background:var(--card);backdrop-filter:blur(18px);box-shadow:0 10px 40px rgba(20,20,20,.06), inset 0 1px 0 rgba(255,255,255,.7);border-radius:32px;transition:.35s}
+.border-theme:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(20,20,20,.1)}
+.btn{background:linear-gradient(135deg,var(--accent),#ff9f1a);color:#fff;padding:1rem 2.5rem;font-weight:900;text-transform:uppercase;border-radius:999px;transition:.25s;box-shadow:0 14px 35px rgba(245,124,0,.30)}
+.btn:hover{transform:translateY(-3px) scale(1.01);filter:brightness(.96)}
+.luxury-line{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+</style>
+</head>
+<body class="p-6 md:p-12"><div class="fixed inset-0 -z-10 opacity-40" style="background-image:radial-gradient(circle at 20% 20%, rgba(245,124,0,.10), transparent 30%), radial-gradient(circle at 80% 10%, rgba(245,124,0,.08), transparent 25%);"></div>
+  <nav class="flex justify-between items-center mb-20">
+    <div class="brand text-3xl tracking-tight">CHIPKADE.</div>
+    <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em]">
+      <a href="#">Catalog</a><a href="#">Collections</a><a href="#">Custom Lab</a>
+    </div>
+    <div class="font-black text-sm uppercase">Bag (0)</div>
+  </nav>
+  <section class="grid md:grid-cols-2 gap-10 items-center mb-28">
+    <div>
+      <p class="uppercase text-xs font-black tracking-[0.3em] text-[#f57c00] mb-4">Studio Series / 01</p>
+      <h1 class="text-[10vw] leading-[0.9] font-black tracking-tight mb-6">BUILT<br>TO <span class="italic text-[#175fd3]">STICK.</span></h1>
+      <p class="max-w-lg text-lg opacity-80 mb-8">Minimal, premium and collectible — stickers, skins, keychains and custom drops crafted for people who want personality in everything they own.</p>
+      <button class="btn">Explore Drop</button>
+    </div>
+    <div class="border-theme min-h-[520px] p-8 flex items-end justify-between">
+      <span class="text-7xl font-black opacity-10">01</span>
+      <span class="font-bold uppercase text-sm">Featured Product Render</span>
+    </div>
+  </section>
+  <section class="mb-28">
+    <div class="flex justify-between items-end mb-8 gap-4">
+      <div>
+        <p class="text-xs font-black uppercase tracking-[0.3em] text-[#175fd3] mb-2">Featured Collection</p>
+        <h2 class="text-4xl md:text-6xl font-black tracking-tight">BEST PICKS.</h2>
+      </div>
+      <a href="#" class="font-black uppercase text-sm hover:text-[#175fd3]">View All →</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-16">
+      <div class="border-theme p-6 bg-white">
+        <div class="h-72 border-theme mb-5 flex items-center justify-center font-bold opacity-40">PRODUCT 01</div>
+        <h3 class="text-2xl font-black">Anime Metal Keychain</h3>
+        <p class="opacity-70 mt-2">Premium finish • Limited drop</p>
+        <div class="mt-5 flex justify-between items-center">
+          <span class="font-black text-xl">₹149</span>
+          <button class="btn !px-5 !py-3 text-sm">Add</button>
+        </div>
+      </div>
+
+      <div class="border-theme p-6 bg-[#175fd3] text-[#fffaf2] border-[#175fd3] scale-[1.02]">
+        <div class="h-72 border-2 border-[#fff6e5] mb-5 flex items-center justify-center font-bold opacity-80">FEATURED DROP</div>
+        <h3 class="text-2xl font-black">Signature Sticker Pack</h3>
+        <p class="opacity-90 mt-2">Best seller • Waterproof vinyl</p>
+        <div class="mt-5 flex justify-between items-center">
+          <span class="font-black text-xl">₹129</span>
+          <button class="bg-[#fff6e5] text-[#175fd3] px-5 py-3 font-black uppercase">Add</button>
+        </div>
+      </div>
+
+      <div class="border-theme p-6 bg-white">
+        <div class="h-72 border-theme mb-5 flex items-center justify-center font-bold opacity-40">PRODUCT 03</div>
+        <h3 class="text-2xl font-black">Custom Laptop Skin</h3>
+        <p class="opacity-70 mt-2">Precision cut • Smooth matte</p>
+        <div class="mt-5 flex justify-between items-center">
+          <span class="font-black text-xl">₹299</span>
+          <button class="btn !px-5 !py-3 text-sm">Add</button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p class="text-xs font-black uppercase tracking-[0.3em] text-[#175fd3] mb-6">Shop By Category</p>
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="border-theme p-8 min-h-[220px] flex flex-col justify-between"><h3 class="text-3xl font-black">Stickers</h3><span class="font-bold opacity-60">Collection →</span></div>
+        <div class="border-theme p-8 min-h-[220px] flex flex-col justify-between bg-[#175fd3] text-[#fff6e5] border-[#175fd3]"><h3 class="text-3xl font-black">Keychains</h3><span class="font-bold opacity-90">Collection →</span></div>
+        <div class="border-theme p-8 min-h-[220px] flex flex-col justify-between"><h3 class="text-3xl font-black">Skins</h3><span class="font-bold opacity-60">Collection →</span></div>
+        <div class="border-theme p-8 min-h-[220px] flex flex-col justify-between"><h3 class="text-3xl font-black">Custom Lab</h3><span class="font-bold opacity-60">Build →</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-theme p-10 md:p-16 mb-28 text-center">
+    <p class="text-xs font-black uppercase tracking-[0.3em] text-[#175fd3] mb-4">Join The Archive</p>
+    <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-6">EARLY ACCESS.<br/>LIMITED DROPS.</h2>
+    <p class="max-w-xl mx-auto opacity-75 mb-8">Be first to know when exclusive designs, collabs and custom drops go live.</p>
+    <div class="max-w-xl mx-auto flex flex-col md:flex-row gap-4">
+      <input type="email" placeholder="Enter your email" class="flex-1 bg-transparent border-b-2 border-black px-2 py-4 outline-none font-bold placeholder:text-black/50" />
+      <button class="btn">Join Now</button>
+    </div>
+  </section>
+
+  <footer class="pt-6 border-t border-black flex flex-col md:flex-row justify-between gap-6 text-xs font-bold uppercase tracking-[0.2em] opacity-70">
+    <span>© 2026 CHIPKADE Studio</span>
+    <span>Designed in India</span>
+    <span>Built To Stick</span>
+  </footer>
+</body>
+</html>
