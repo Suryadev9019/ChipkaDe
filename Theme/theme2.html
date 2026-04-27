@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIPKADE.EXE // LAB_01</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --white: #ffffff;
+            --red: #ec1302;
+            --grey: #a79d9f;
+        }
+        body { background-color: var(--white); color: #000; font-family: 'Space Grotesk', sans-serif; }
+        
+        /* Utility Classes */
+        .border-utility { border: 2px solid #000; }
+        .text-grey { color: var(--grey); }
+        .text-red { color: var(--red); }
+        .bg-red { background-color: var(--red); }
+
+        .btn-industrial {
+            background-color: var(--red); color: #fff;
+            padding: 1.5rem 3rem; font-weight: 900; text-transform: uppercase;
+            border: 2px solid #000; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .btn-industrial:hover { background-color: #000; transform: translateY(-6px); box-shadow: 8px 8px 0px rgba(0,0,0,0.1); }
+        
+        .card-reveal { transition: all 0.4s ease; }
+        .card-reveal:hover { border-color: var(--red); transform: translateY(-4px); }
+    </style>
+</head>
+<body class="p-4 md:p-12">
+
+    <nav class="flex justify-between items-center pb-8 border-b-4 border-black mb-20">
+        <div class="text-4xl font-black italic tracking-tighter">CHIPKADE.EXE</div>
+        <div class="hidden md:flex gap-12 font-bold uppercase text-[11px] tracking-widest">
+            <a href="#" class="hover:text-red transition">/Store</a>
+            <a href="#" class="hover:text-red transition">/Lab-Specs</a>
+            <a href="#" class="hover:text-red transition">/Archive</a>
+        </div>
+        <div class="font-black text-xs uppercase">Bag [0]</div>
+    </nav>
+
+    <header class="mb-32">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-6">
+                <div class="text-red font-bold text-[10px] mb-6">// RELEASE_2026.04 // STATUS: ACTIVE</div>
+                <h1 class="text-[6rem] md:text-[9rem] font-black leading-[0.85] tracking-tighter mb-10">LAB <br> <span class="text-red italic">TESTED.</span></h1>
+                <p class="max-w-md mb-12 font-bold text-lg text-grey">Vinyl assets engineered for maximum impact. 3M Adhesive, UV resistant, and zero-residue. The ultimate utility upgrade.</p>
+                <button class="btn-industrial">Access Shop Collection</button>
+            </div>
+            <div class="md:col-span-6 border-utility h-[500px] bg-grey/10 flex flex-col items-center justify-center p-8 text-center font-bold text-grey">
+                <div class="w-16 h-16 border-2 border-black mb-4"></div>
+                PRODUCT_RENDER_AREA
+            </div>
+        </div>
+    </header>
+
+    <section class="mb-32">
+        <h2 class="text-[10px] font-black uppercase mb-12 tracking-[0.2em] text-grey">// The_Product_Catalog</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            
+            <div class="md:col-span-2 md:row-span-2 border-utility p-8 h-[500px] flex flex-col justify-between card-reveal cursor-pointer">
+                <h2 class="text-6xl font-black tracking-tighter">STICKERS</h2>
+                <div class="font-bold uppercase tracking-widest">// VIEW_ALL</div>
+            </div>
+
+            <div class="border-utility p-8 h-[242px] flex flex-col justify-between card-reveal cursor-pointer">
+                <h2 class="text-3xl font-black">SKINS</h2>
+                <span class="font-bold text-red">// 01</span>
+            </div>
+
+            <div class="border-utility p-8 h-[242px] flex flex-col justify-between card-reveal cursor-pointer">
+                <h2 class="text-3xl font-black">KEYCHAINS</h2>
+                <span class="font-bold text-red">// 02</span>
+            </div>
+
+            <div class="md:col-span-2 border-utility p-8 h-[242px] flex flex-col justify-between card-reveal cursor-pointer">
+                <h2 class="text-3xl font-black">POSTERS</h2>
+                <span class="font-bold text-red">// 03</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-black text-white p-12 mb-32 text-center">
+        <h3 class="text-sm font-bold uppercase tracking-[0.3em] mb-12 opacity-50">// Lab_Specs</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div><div class="text-red text-3xl font-black mb-2">3M</div><p class="text-xs uppercase font-bold">Adhesive</p></div>
+            <div><div class="text-red text-3xl font-black mb-2">UV</div><p class="text-xs uppercase font-bold">Resistant</p></div>
+            <div><div class="text-red text-3xl font-black mb-2">WP</div><p class="text-xs uppercase font-bold">Waterproof</p></div>
+            <div><div class="text-red text-3xl font-black mb-2">ZR</div><p class="text-xs uppercase font-bold">No-Residue</p></div>
+        </div>
+    </section>
+
+    <footer class="pt-12 grid grid-cols-1 md:grid-cols-3 gap-16 text-xs font-bold uppercase tracking-widest">
+        <div>
+            <h4 class="text-red mb-6">// HQ_LOCATION</h4>
+            <p class="text-grey">New Delhi, India<br>Operating 10:00 - 18:00 IST</p>
+        </div>
+        <div>
+            <h4 class="text-red mb-6">// LEGAL_TERMS</h4>
+            <p class="text-grey">Shipping Policy<br>Returns & Refunds<br>Data Privacy</p>
+        </div>
+        <div>
+            <h4 class="text-red mb-6">// SOCIAL_CHANNELS</h4>
+            <p class="text-grey">Instagram<br>TikTok<br>X/Twitter</p>
+        </div>
+    </footer>
+
+</body>
+</html>

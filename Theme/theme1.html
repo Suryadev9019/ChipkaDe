@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIPKADE® | Studio Series</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* CSS Variables - Strict adherence to your palette */
+        :root {
+            --bg: #fff6e5;
+            --text: #010402;
+            --accent: #175fd3;
+        }
+
+        body { 
+            background-color: var(--bg); 
+            color: var(--text); 
+            font-family: 'Inter', sans-serif; 
+        }
+
+        /* Typography */
+        .brand-font { font-family: 'Unbounded', sans-serif; font-weight: 900; }
+        
+        /* Elements */
+        .btn-blue { 
+            background-color: var(--accent); 
+            color: var(--bg); 
+            padding: 1rem 2.5rem; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            transition: 0.3s;
+        }
+        .btn-blue:hover { background-color: var(--text); }
+
+        .card-border { border: 2px solid var(--text); }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <nav class="flex justify-between items-center mb-20">
+        <div class="text-3xl font-black tracking-tighter">CHIPKADE.</div>
+        <div class="flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <a href="#" class="hover:text-[#175fd3]">Catalog</a>
+            <a href="#" class="hover:text-[#175fd3]">Lab</a>
+            <a href="#" class="hover:text-[#175fd3]">Studio</a>
+        </div>
+        <div class="font-black text-sm uppercase">Bag (0)</div>
+    </nav>
+
+    <header class="mb-32">
+        <h1 class="text-[10vw] font-black tracking-tighter leading-[0.9] mb-8">
+            DESIGNED <br> TO <span class="text-[#175fd3] italic">STAY.</span>
+        </h1>
+        <p class="max-w-md text-lg font-medium mb-10 opacity-80">
+            Premium vinyl assets and bespoke gear. High-tack, zero-residue, and crafted for the modern creator.
+        </p>
+        <button class="btn-blue">Shop Collection</button>
+    </header>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-32">
+        <div class="card-border p-12 h-[500px] flex flex-col justify-between">
+            <h2 class="text-5xl font-black uppercase">Stickers</h2>
+            <div class="text-[#175fd3] font-bold underline cursor-pointer">Browse Archive</div>
+        </div>
+        <div class="card-border p-12 h-[500px] flex flex-col justify-between">
+            <h2 class="text-5xl font-black uppercase">Skins</h2>
+            <div class="text-[#175fd3] font-bold underline cursor-pointer">Configure Now</div>
+        </div>
+        <div class="card-border p-12 h-64 flex flex-col justify-between">
+            <h2 class="text-3xl font-black uppercase">Posters</h2>
+        </div>
+        <div class="card-border p-12 h-64 flex flex-col justify-between">
+            <h2 class="text-3xl font-black uppercase">Keychains</h2>
+        </div>
+    </section>
+
+    <section class="py-24 border-t border-b border-black text-center">
+        <h3 class="text-5xl font-black mb-8 tracking-tighter">JOIN THE ARCHIVE</h3>
+        <div class="max-w-md mx-auto flex gap-4">
+            <input type="email" placeholder="ENTER EMAIL" class="bg-transparent border-b-2 border-black p-2 w-full outline-none placeholder:text-black font-bold">
+            <button class="bg-[#175fd3] text-[#fff6e5] px-8 font-black uppercase">Send</button>
+        </div>
+    </section>
+
+    <footer class="pt-16 text-center text-xs font-bold uppercase tracking-widest opacity-60">
+        © 2026 CHIPKADE STUDIO // DESIGNED IN INDIA
+    </footer>
+
+</body>
+</html>

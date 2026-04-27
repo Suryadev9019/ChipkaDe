@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CHIPKADE® | Dark Mode</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg: #010402;
+      --card: #060908; /* Darker than background */
+      --text: #7a7a7a; /* Muted grey, not white */
+      --red: #ec1302;
+      --blue: #175fd3;
+    }
+    
+    body { background-color: var(--bg); color: var(--text); font-family: sans-serif; }
+    
+    /* Remove white cards, use dark cards */
+    .bento-card { 
+      background: var(--card); 
+      border: 1px solid #1a1e1d; 
+      border-radius: 20px; 
+    }
+    
+    .text-vibrant { color: #e0e0e0; }
+    .accent-red { color: var(--red); }
+    .accent-blue { color: var(--blue); }
+  </style>
+</head>
+
+<body>
+
+  <nav class="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
+    <div class="text-3xl font-black italic tracking-tighter text-vibrant">CHIPKADE.</div>
+    <div class="flex gap-8 text-xs font-bold uppercase tracking-widest">
+      <a href="#" class="hover:text-vibrant transition-colors">Shop</a>
+      <a href="#" class="accent-blue">Drops</a>
+    </div>
+  </nav>
+
+  <header class="max-w-7xl mx-auto px-6 py-20 text-center">
+    <h1 class="text-[12vw] md:text-[8rem] font-black leading-[0.8] uppercase mb-10 tracking-tighter text-vibrant">
+      STAY<br><span class="accent-red">DARK.</span>
+    </h1>
+    <div class="flex justify-center gap-6">
+      <button class="bg-[var(--red)] text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-all">Explore</button>
+    </div>
+  </header>
+
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="grid md:grid-cols-3 gap-6">
+      
+      <div class="bento-card p-8 border-l-4 border-[var(--blue)]">
+        <span class="accent-blue font-bold uppercase tracking-widest text-xs block mb-4">New Series</span>
+        <h2 class="text-2xl font-black text-vibrant mb-4">Midnight Gear</h2>
+        <p>Premium dark aesthetic for collectors.</p>
+      </div>
+
+      <div class="bento-card p-8 border-l-4 border-[var(--red)]">
+        <span class="accent-red font-bold uppercase tracking-widest text-xs block mb-4">Custom</span>
+        <h2 class="text-2xl font-black text-vibrant mb-4">Commission</h2>
+        <p>Your design, our press.</p>
+      </div>
+
+      <div class="bento-card p-8 border-l-4 border-[var(--blue)]">
+        <span class="accent-blue font-bold uppercase tracking-widest text-xs block mb-4">Shop</span>
+        <h2 class="text-2xl font-black text-vibrant mb-4">All Items</h2>
+        <p>Archive and current drops.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="max-w-7xl mx-auto px-6 py-20 border-t border-[#1a1e1d] text-sm">
+    <div class="flex justify-between items-center">
+      <p>© 2026 CHIPKADE. DARK MODE ACTIVATED.</p>
+      <div class="flex gap-4">
+        <div class="w-4 h-4 bg-[var(--red)] rounded-full"></div>
+        <div class="w-4 h-4 bg-[var(--blue)] rounded-full"></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIPKADE. STUDIO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --cream: #fff6e5;
+            --ink: #010402;
+            --electric: #175fd3;
+        }
+        body { background-color: var(--cream); color: var(--ink); font-family: 'Helvetica Neue', sans-serif; }
+        
+        /* Typography */
+        .header-font { font-family: 'Georgia', serif; } /* Editorial/Mag style */
+        .utility-font { font-family: sans-serif; font-weight: 800; letter-spacing: 0.1em; }
+
+        /* Components */
+        .btn-action { 
+            background-color: var(--electric); color: var(--cream); 
+            padding: 1rem 2rem; text-transform: uppercase; font-weight: 900;
+            transition: 0.3s;
+        }
+        .btn-action:hover { background-color: var(--ink); }
+        
+        .card-shadow { border: 1px solid var(--ink); transition: 0.3s; }
+        .card-shadow:hover { box-shadow: 8px 8px 0px var(--ink); }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <nav class="flex justify-between items-center mb-24 uppercase text-xs utility-font">
+        <div class="text-3xl font-black italic">CHIPKADE.</div>
+        <div class="hidden md:flex gap-8">
+            <a href="#" class="hover:text-[#175fd3]">Archives</a>
+            <a href="#" class="hover:text-[#175fd3]">Lab</a>
+            <a href="#" class="hover:text-[#175fd3]">Contact</a>
+        </div>
+        <div>Bag (0)</div>
+    </nav>
+
+    <header class="mb-32">
+        <h1 class="header-font text-[12vw] leading-[0.8] mb-10 tracking-tighter">
+            THE<br>DESIGN<br><span class="text-[#175fd3] italic">SERIES.</span>
+        </h1>
+        <div class="flex flex-col md:flex-row justify-between items-end gap-10">
+            <p class="max-w-sm text-lg opacity-80">Premium vinyl assets for the modern workspace. High-tack, zero-residue, and crafted with purpose.</p>
+            <button class="btn-action">Explore Series 01</button>
+        </div>
+    </header>
+
+    <section class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-32">
+        <div class="md:col-span-2 md:row-span-2 card-shadow p-8 flex flex-col justify-between h-96">
+            <h2 class="text-4xl font-black">STICKERS</h2>
+            <div class="text-[#175fd3] font-black underline">View All</div>
+        </div>
+        <div class="card-shadow p-8 h-96 flex flex-col justify-between bg-[#010402] text-[#fff6e5]">
+            <h2 class="text-2xl font-black">SKINS</h2>
+        </div>
+        <div class="card-shadow p-8 h-96 flex flex-col justify-between">
+            <h2 class="text-2xl font-black">POSTERS</h2>
+        </div>
+        <div class="md:col-span-4 card-shadow p-8 h-40 flex items-center justify-between">
+            <h2 class="text-xl font-black italic">Bespoke Keychains & Custom Accessories</h2>
+            <button class="bg-[#175fd3] text-[#fff6e5] px-6 py-2 uppercase font-black text-xs">Configure</button>
+        </div>
+    </section>
+
+    <section class="py-24 border-t border-[#010402] mb-24">
+        <div class="text-center">
+            <h3 class="text-5xl font-black mb-10">JOIN THE ARCHIVE</h3>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <input type="email" placeholder="EMAIL_ADDRESS" class="bg-transparent border-b-2 border-black p-2 w-64 outline-none font-bold">
+                <button class="font-black underline underline-offset-4 hover:text-[#175fd3]">SUBSCRIBE</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center opacity-50 text-xs utility-font pb-8">
+        &copy; 2026 CHIPKADE STUDIO // ALL RIGHTS RESERVED
+    </footer>
+
+</body>
+</html>
